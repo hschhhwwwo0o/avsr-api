@@ -1,6 +1,6 @@
-import { HooksObject } from "@feathersjs/feathers";
+// Application hooks that run for every service
 
-export default {
+module.exports = {
   before: {
     all: [],
     find: [],
@@ -8,7 +8,7 @@ export default {
     create: [],
     update: [],
     patch: [],
-    remove: [],
+    remove: []
   },
 
   after: {
@@ -18,7 +18,7 @@ export default {
     create: [],
     update: [],
     patch: [],
-    remove: [],
+    remove: []
   },
 
   error: {
@@ -28,6 +28,6 @@ export default {
     create: [],
     update: [],
     patch: [],
-    remove: [],
-  },
-};
+    remove: []
+  }
+}
