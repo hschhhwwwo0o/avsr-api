@@ -28,6 +28,7 @@
     "lint": "standard",
     "dev": "nodemon src/",
     "start": "node src/",
+    "deploy": "node lib/",
     "jest": "jest --forceExit"
   },
   "standard": {
