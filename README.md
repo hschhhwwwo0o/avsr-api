@@ -1,4 +1,4 @@
-![GitHub Dark](./md/index.png#gh-light-mode-only)
+![GitHub Dark](./md/index2.png#gh-light-mode-only)
 
 RESTful API on FeathersJS with MongoDB database
 
