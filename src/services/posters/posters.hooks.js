@@ -17,8 +17,8 @@ module.exports = {
     find: [
       async ctx => {
         const newPosters = await ctx.result.data.map(async poster => {
-          const { id, email } = await ctx.app.service("users").get(poster.userId);
-          return { ...poster, user: { id, email } };
+          const { _id, email } = await ctx.app.service("users").get(poster.userId);
+          return { ...poster, user: { _id, email } };
         });
         await Promise.all(newPosters).then(data => {
           ctx.result.data = data;
