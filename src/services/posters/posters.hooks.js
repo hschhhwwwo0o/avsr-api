@@ -14,7 +14,18 @@ module.exports = {
 
   after: {
     all: [],
-    find: [],
+    find: [
+      async ctx => {
+        const newPosters = await ctx.result.data.map(async poster => {
+          const { id, email } = await ctx.app.service("users").get(poster.userId);
+          return { ...poster, user: { id, email } };
+        });
+        await Promise.all(newPosters).then(data => {
+          ctx.result.data = data;
+          return ctx;
+        });
+      },
+    ],
     get: [],
     create: [],
     update: [],
