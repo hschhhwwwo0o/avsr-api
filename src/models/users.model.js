@@ -5,6 +5,7 @@ module.exports = function (app) {
     {
       email: { type: String, unique: true, lowercase: true },
       password: { type: String },
+      image: { type: String },
     },
     {
       timestamps: true,
